@@ -1,0 +1,21 @@
+= Use OCP-Viewer 
+:the_libs: `build123d` and `CadQuery`
+
+OCP-Viewer is a VS-Code extension that allows you to view the model you generate with {the_libs}.
+
+== Code Example
+
+[source,python]
+----
+from build123d import *             #!adoc| https://build123d.readthedocs.io[documentation]
+from ocp_viewer import *            #!adoc| https://github.com/bernhard-42/vscode-ocp-cad-viewer[documentation on Github]
+
+# %%
+from build123d import *
+from ocp_vscode import *
+
+# %%
+b = Box(1,2,3)
+show(b)
+# %%
+---
