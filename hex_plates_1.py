@@ -65,6 +65,23 @@ top_plane = Plane(
     origin=top_face.center(), x_dir=(1, 0, 0), z_dir=top_face.normal_at()
 )
 
+with BuildPart(top_plane) as middle_plate:
+    with BuildSketch(top_plane) as the_element:
+        element2 = RegularPolygon(p_width_part/2, 6, rotation=30)
+
+    extrude(amount=p_height, taper=0.1)
+
+top_face = (
+    middle_plate.faces()
+    .filter_by(GeomType.PLANE)
+    .sort_by(Axis.Z)[-1]
+)
+# Create a workplane from the face
+top_plane = Plane(
+    origin=top_face.center(), x_dir=(1, 0, 0), z_dir=top_face.normal_at()
+)
+
+
 with BuildPart(top_plane) as top_plate:
     with BuildSketch(top_plane) as the_element:
         element2 = RegularPolygon(p_width_part/2, 6, rotation=30)
@@ -73,15 +90,16 @@ with BuildPart(top_plane) as top_plate:
             the_f = (factor-1)*0.1
             if factor <= 2:
                 create_6_holes(p_width_part, the_f)
-            elif factor <= 3:
+            elif factor <= 4:
                 create_12_holes(p_width_part, the_f)
             elif factor <=6:
                 create_24_holes(p_width_part, the_f)
             else:
-                create_6_holes(height_triangle(p_width_part), the_f, start_angle=30.)
+                a = (height_triangle(p_width_part) + p_width_part) / 2
+                create_6_holes(a, the_f, start_angle=30.)
         
     extrude(amount=p_height, taper=0.1)
 
 
-show(plate,top_plate,top_face)
+show(plate,middle_plate, top_plate)
 # %%
