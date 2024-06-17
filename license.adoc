@@ -3,8 +3,10 @@
 :year: 2024
 
 [IMPORTANT]
+====
 Version v2024.01
 Copyright © 2024 [Andreas Felix Haeberle]
+====
 
 == TL;DR
 . Name that your project uses `mountainkea123d`, best with a link to this repository
