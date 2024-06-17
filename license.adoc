@@ -2,8 +2,9 @@
 :fullname: Andreas Felix Haeberle
 :year: 2024
 
-  Version v2024.01
-  Copyright © 2024 [Andreas Felix Haeberle]
+[IMPORTANT]
+Version v2024.01
+Copyright © 2024 [Andreas Felix Haeberle]
 
 == TL;DR
 . Name that your project uses `mountainkea123d`, best with a link to this repository
