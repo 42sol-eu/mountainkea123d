@@ -1,0 +1,28 @@
+= MountainKea123d: Play with build123d
+felix@42sol.eu
+2024-06-16
+
+== Welcome
+The Kea is a mountain parrot. 
+
+* It is a very intelligent bird. 
+* It is also very curious. 
+* It is also very social. 
+* It is also very **playful**. 
+* It is also very **mischievous**. 
+
+Learning a new skill using tools and other materials can be difficult at times. I learn best if I can play and solve small riddles and puzzles. This is why I created this project. It collects my ideas and journey how I learned to use https://build123d.readthedocs.io[`build123d`].
+
+It is thought used in addition to the official documentation and the tutorials there.
+
+It is aimed to build your personal library of examples and snippets to achieve that bigger goals that you have in mind.
+
+But before you fly high, you need to learn it.
+
+== Goals
+
+TODO: document goals
+
+== Setup
+
+TODO: write setup
